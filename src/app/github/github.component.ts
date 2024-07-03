@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './github.component.css'
 })
 export class GithubComponent {
-
+  profile = '';
+  profileData: any = []
+  findProfile(){
+    
+  }
 }
