@@ -1,5 +1,22 @@
 <div style="text-align: center;">
     <h1>Github Profile Searcher</h1>
     <input type="text" placeholder="Find a profile" [(ngModel)]="profile" (keydown.enter) = "findProfile()" id="areaInput" class="input"/>
+
+    <div *ngIf ="profileData" style="display: flex; justify-content: center; gap: 10px;">
+        <div>
+            <img src="{{profileData.avatar_url}}" width="200" height="200">
+            <p style="font-size: 24px;">Created: {{profileData.created_at.slice(0,10)}}</p>
+        </div>
+
+        <div style="font-size: 24px;">
+            <p>{{profileData.name}}</p>
+            <p>Followers: {{profileData.followers}} <br>
+                From: {{profileData.location}} <br>
+                Bio: {{profileData.bio}}
+            </p>
+        </div>
+    
+    </div>
+    
 </div>
 
